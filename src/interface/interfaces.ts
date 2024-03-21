@@ -8,7 +8,7 @@ import dayjs from "dayjs";
 import { CreateBooking } from "../page/meeting-room-list/create-booking-modal";
 
 const axiosInstance = axios.create({
-    baseURL: 'http://10.45.28.38:3000/',
+    baseURL: 'http://39.108.118.4:82/api',
     timeout: 3000
 })
 
