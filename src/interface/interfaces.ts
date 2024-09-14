@@ -9,6 +9,7 @@ import { CreateBooking } from "../page/meeting-room-list/create-booking-modal";
 
 const axiosInstance = axios.create({
     baseURL: 'http://39.108.118.4:82/api',
+    // baseURL: 'http://localhost:3000',
     timeout: 3000
 })
 
@@ -187,4 +188,8 @@ export async function bookingAdd(booking: CreateBooking) {
         endTime,
         note: booking.note            
     });
+}
+
+export async function presignedUrl(fileName:string) {
+    return axiosInstance.get(`/minio/presignedUrl?name=${fileName}`)
 }
